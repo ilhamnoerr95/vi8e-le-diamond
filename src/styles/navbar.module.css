@@ -1,0 +1,67 @@
+@font-face {
+    font-family: bodoni72;
+    src: url('./fonts/bodoni-72-smallcaps-book.ttf');
+  }
+
+
+.wrapper-nav {
+    width: 100%;
+    background-color: #ffff;
+    padding: 2.31rem 6rem;
+    color: black;
+    box-shadow: 0px 4px 4px 0px #0000001A;
+}
+
+.link > a {
+    cursor: pointer;
+    position:relative;
+}
+.link > a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: yellow;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.link > a:hover {
+    color:#9B622F;
+}
+
+
+.font-diamonds {
+    font-family: bodoni72;
+}
+
+
+.section-delivery {
+    padding: 33px;
+    background-color: #9B622F;
+}
+
+.section-delivery > button {
+    padding: 8.5px 25px;
+    background-color: #ffffff;
+    color: #9B622F;
+} 
+
+.this-footer{
+    background: #222224;
+    padding: 2.31rem 6rem;
+    column-gap: 14rem;
+
+}
+
+.this-footer > .section-2 {
+    column-gap: 10rem;
+}
+
+.section-3{
+    column-gap: 10rem;
+
+}

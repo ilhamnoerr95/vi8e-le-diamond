@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
+
+// styles
+import Styles from "@/styles/navbar.module.css"
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +21,101 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+   
+      <body className={inter.className}>
+          <nav id="head-nav" className={`${Styles['wrapper-nav']} flex justify-between`}>
+            <div className="flex gap-16 items-center">
+              <h3 className={`${Styles['font-diamonds']}`}>LE DIAMONDS</h3>
+              <div className={`${Styles.link} gap-x-14 flex`}>
+                <Link href="#">Collections</Link>
+                <Link href="#">Our Story</Link>
+                <Link href="#">Blogs</Link>
+              </div>
+            </div>
+
+            <div className="flex gap-4" >
+                <div className="flex gap-2 align-middle"> 
+                  <h5><strong>FREE DELIVERY FOR ORDERS ABOVE $199</strong></h5>
+                  <Image src="/icons/user.png" alt="image" width={30} height={30}/>
+                  
+                </div>
+                <div>
+                  <Image src="/icons/chart.png" alt="image" width={30} height={30}/>
+                </div>
+            </div>
+          </nav>
+          {children}
+          <footer>
+            <div className={`${Styles['section-delivery']} gap-10 flex flex-wrap justify-center items-center`}>
+              <div className="flex gap-10">
+                <h2>FREE DELIVERY</h2> 
+                <span>|</span>
+                <span>Free orders over $199</span>
+              </div>
+              <button>SHOP COLLETCIONS</button>
+            </div>
+            <div className={`${Styles['this-footer']} flex flex-wrap `}>
+              <div style={{maxWidth:"300px"}}>
+                <h3 className={`${Styles['font-diamonds']} mb-6 text-xl`}>LE DIAMONDS</h3>
+                <p>
+                With Le Diamonds, we hope to empower and inspire women of all ages, 
+                giving them the courage and confidence to power through each day 
+                with their choice of elegant and charming contemporary jewellery.
+                </p>
+                <div className="mt-4 flex gap-4">
+                  <span>paypall</span>
+                  <span>visa</span>
+                  <span>circle</span>
+                  <span>american express</span>
+                </div>
+              </div>
+              <div className={`${Styles["section-2"]} flex`}>
+                <div className="flex flex-col gap-2">
+                  <h2>COLLECTIONS</h2>
+                  <ul className="flex flex-col gap-2">
+                    <li>Rings</li>
+                    <li>Earings</li>
+                    <li>Necklaces</li>
+                    <li>Bracelets</li>
+                    <li>Pendants</li>
+                  </ul>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <h2>INFORMATION</h2>
+                  <ul className="flex flex-col gap-2">
+                    <li>FAQ</li>
+                    <li>Help & Support</li>
+                    <li>Term of Service</li>
+                    <li>Privacy Policy</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="flex-col flex gap-20">
+                <div className={`${Styles["section-3"]} flex`}>
+                  <div className="flex flex-col gap-2">
+                    <h2>KNOW MORE</h2>
+                    <ul className="flex flex-col gap-2">
+                      <li>All about clarities</li>
+                      <li>Partnership</li>
+                    </ul>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <h2>CONTACTING INFO</h2>
+                    <ul className="flex flex-col gap-2">
+                      <li>(+603) 95441361</li>
+                      <li>info@lediamonds.com</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="copy-right self-end">
+                  ©2022 Le Diamonds - All Rights Reserved
+                </div>
+            </div>
+
+            </div>
+          </footer>
+        </body>
     </html>
   );
 }
