@@ -1,0 +1,23 @@
+@font-face {
+    font-family: bodoni72;
+    src: url('./fonts/bodoni-72-smallcaps-book.ttf');
+}
+
+@font-face {
+    font-family: bodoni72c;
+    src: url('./fonts/Bodoni72C\ Regular.otf');
+}
+
+@font-face {
+    font-family: cabin-regular;
+    src: url('./fonts/Cabin-Regular.ttf');
+}
+
+
+.font-diamonds-c {
+    font-family: bodoni72c;
+}
+
+.font-cabin-regular {
+    font-family: cabin-regular;
+}

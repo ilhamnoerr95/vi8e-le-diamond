@@ -1,0 +1,115 @@
+.wrapper-banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/assets/banner.png");
+    min-height: 75vh;
+    /* height: 100%; */
+    width:100%;
+    padding: 0 6rem;
+}
+
+.wrapper-banner > .content-banner {
+    max-width: 40vw;
+}
+
+.hr {
+    border: 1px solid red;
+}
+
+/* products sections */
+.wrapper-products {
+    padding: 0 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: black;
+}
+
+.text > a {
+    text-decoration: underline!important;
+}
+.bg-global {
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 39vh;
+    width: 100%;
+}
+
+.item-2 , .item-3, .item-4,  .item-6 {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-2 > .images , .item-3 > .images, .item-4 > .images ,.item-6 > .images {
+    align-self: center;
+}
+    
+.item-2 > .text , .item-3 > .text, .item-4 > .text ,.item-6 > .text{
+    margin: 1rem;
+    }
+
+.item-1 {
+    background-image: url("/products/Rectangle 883.png");
+    grid-column: 1/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.item-1 > .images {
+    width: 350px !important;
+    height: 350px !important;
+}
+
+.item-2 {
+    background-image: url("/products/Rectangle 885.png");
+   
+}
+
+.item-3 {
+    background-image: url("/products/Rectangle 886.png");
+
+} 
+
+.item-4 {
+    background-image: url("/products/Rectangle 888.png");
+
+} 
+
+.item-5 {
+    background-image: url("/products/Rectangle 884.png");
+    grid-column: 2/ 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-6 {
+    background-image: url("/products/Rectangle 887.png");
+
+} 
+
+/* mini content */
+.wrapper-mini {
+    padding: 0 6rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12rem;
+}
+
+.wrapper-mini > .image {
+    width: 400px;
+    height: 560px;
+}
+
+.wrapper-mini > .content {
+    max-width: 800px;
+    width: 100%;
+}
+
+/* best selling */
+.wrapper-best-selling {
+
+}
