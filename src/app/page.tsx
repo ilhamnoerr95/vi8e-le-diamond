@@ -4,7 +4,7 @@ import Fonts from "@/styles/font.module.css"
 
 // components
 import {Button} from "@/components/atoms/button"
-import {way, products} from "@/const/dummy"
+import {way, products, bestSelling} from "@/const/dummy"
 
 export default function Home() {
   return (
@@ -69,11 +69,33 @@ export default function Home() {
 
           {/* best selling */}
           <div className={`${Styles['wrapper-best-selling']}`}>
+            <div className={`${Styles['best']}`}>
+                <h1 className="font-bold text-3xl mb-4">our Best Selling
+                Products</h1>
+                <Button title="SHOP COLLECTIONS" color="#ffff" backgroundColor="#9B622F"/>
+            </div>
+
+            {
+              bestSelling.map((product)=> (
+                <div key={product.no} className={`${Styles[`seller`]}`}>
+                    <Image src={product.img} width={200} height={200} alt="beest-seller"/>
+                    <h6 className={`${Fonts["font-cabin-regular"]} font-bold text-xs`}>{product.title}</h6>
+                    <p className="text-xs text-gray-500">{product.price}</p>
+                </div>
+              ))
+            }
 
           </div>
 
         </div>
 
+            {/* recent blogs */}
+          <div className={`${Styles["blogs-wrapper"]} my-10`}>
+              <h1>Recent Blogs</h1>
+              <div className="card-wrapper">
+                <div className="card"></div>
+              </div>
+          </div>
     </main>
   );
 }

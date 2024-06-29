@@ -111,5 +111,37 @@
 
 /* best selling */
 .wrapper-best-selling {
+    padding: 0 6rem;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    color: black;
+    min-height: 51.8vh;
+    gap:1rem;
+}
 
+.wrapper-best-selling > .best {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    background-image: url("/selling/Rectangle 889.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    min-width: 418px;
+    padding: 5rem 2rem;
+}
+
+.seller {
+    background: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    padding-bottom:2rem;
+}
+
+/* recent blogs */
+.blogs-wrapper {
+    padding: 0 6rem;
+    color: black;
+    text-align: center;
 }
